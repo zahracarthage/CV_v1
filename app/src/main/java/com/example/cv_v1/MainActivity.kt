@@ -91,7 +91,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun reset(view: android.view.View) {
+        binding.fullName.text.clear()
+        binding.age.text.clear()
+        binding.Email.text.clear()
 
+        binding.androidBar.progress = 0
+        binding.flutterBar.progress = 0
+        binding.iosBar.progress = 0
+        binding.btnFemme.isChecked = false
+        binding.btnHomme.isChecked= true
 
     }
 }
