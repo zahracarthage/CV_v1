@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rellay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        >
+
+
+        <ImageView
+            android:id="@+id/imgUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+
+        <EditText
+            android:id="@+id/fullName"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:hint="@string/fullName"
+            android:textSize="20sp"
+            android:layout_toEndOf="@id/imgUser"
+            android:backgroundTint="@color/colorSecondary"
+
+
+            />
+
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fullName"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="65dp"
+            android:layout_toEndOf="@id/imgUser"
+            android:hint="@string/age"
+            android:textSize="20sp"
+            android:inputType="number"
+            android:backgroundTint="@color/colorSecondary"
+
+            />
+
+        <EditText
+            android:id="@+id/Email"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/age"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="115dp"
+            android:layout_toEndOf="@id/imgUser"
+            android:hint="@string/email"
+            android:textSize="20sp"
+            android:inputType="textEmailAddress"
+            android:backgroundTint="@color/colorSecondary"
+
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relay2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintVertical_bias="10.0"
+        android:background="@color/colorPrimaryVariant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rellay1"
+
+        />
+
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/relay2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
+        android:text="@string/gender"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+
+    />
+
+    <RadioGroup
+        android:id="@+id/group_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="20dp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+
+        >
+        <RadioButton
+            android:id="@+id/btn_homme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/homme"
+            android:buttonTint="@color/colorSecondary"
+
+            />
+
+        <RadioButton
+            android:id="@+id/btn_femme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/femme"
+            android:buttonTint="@color/colorSecondary"
+
+            />
+
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/relay3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintVertical_bias="10.0"
+        android:background="@color/colorPrimaryVariant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group_btn"
+        android:layout_marginTop="15dp"
+
+        />
+
+    <TextView
+        android:id="@+id/skills"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/relay3"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
+        android:text="@string/skills"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+
+        />
+
+    <SeekBar
+        android:id="@+id/android_bar"
+        android:layout_width="0dp"
+        android:layout_height="27dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/skills"
+        android:layout_marginTop="25dp"
+        android:max="100"
+        android:layout_marginStart="10dp"
+        android:thumbTint="@color/colorSecondary"
+        android:progressTint="@color/colorSecondary"
+
+
+        />
+    <SeekBar
+        android:id="@+id/ios_bar"
+        android:layout_width="0dp"
+        android:layout_height="27dp"
+        app:layout_constraintTop_toBottomOf="@+id/android_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"
+        android:max="100"
+        android:layout_marginStart="10dp"
+        android:thumbTint="@color/colorSecondary"
+        android:progressTint="@color/colorSecondary"
+
+
+
+
+        />
+    <SeekBar
+        android:id="@+id/flutter_bar"
+        android:layout_width="0dp"
+        android:layout_height="27dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ios_bar"
+        android:layout_marginTop="25dp"
+        android:max="100"
+        android:layout_marginStart="10dp"
+        android:thumbTint="@color/colorSecondary"
+        android:progressTint="@color/colorSecondary"
+
+        />
+
+    <RelativeLayout
+        android:id="@+id/relay4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintVertical_bias="10.0"
+        android:background="@color/colorPrimaryVariant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flutter_bar"
+        android:layout_marginTop="15dp"
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/colorPrimaryVariant"
+
+
+        >
+
+    <Button
+        android:id="@+id/reset_btn"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+
+
+        />
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:onClick="next_btn_clicked"
+            />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
